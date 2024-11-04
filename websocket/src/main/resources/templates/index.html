@@ -34,9 +34,6 @@ let socket = new WebSocket("ws://localhost:8080/index");
 		let username = document.getElementById("username");
 		let messageInput = document.getElementById("messageInput");
 		let fullMessage = username.value + ": " + messageInput.value;
-		if(messageInput.value == "websocket"){
-			socket.send("websocket");
-		}
 		socket.send(fullMessage);
 		messageInput.value = '';
 	}
